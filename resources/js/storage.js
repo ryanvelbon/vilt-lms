@@ -13,6 +13,7 @@ function fetchData(url, key) {
 // Fetch all the necessary data when the page loads
 window.addEventListener('load', () => {
   fetchData('/api/subjects', 'subjects');
+  fetchData('/api/topics', 'topics');
 });
 
 export { appStorage };

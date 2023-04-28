@@ -3,10 +3,17 @@ import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
 const subjects = JSON.parse(localStorage.getItem('subjects'));
+const topics = JSON.parse(localStorage.getItem('topics'));
+
+let topicsMenu = topics['math'];
+
 const selectedSubject = ref('math');
 
 function selectSubject(subjectSlug) {
   selectedSubject.value = subjectSlug;
+
+  topicsMenu = topics[subjectSlug].topics;
+
 }
 
 </script>
@@ -52,21 +59,12 @@ function selectSubject(subjectSlug) {
       <main class="flex">
         <aside class="w-64 hidden lg:block bg-gray-200 pl-8 py-8">
           <nav class="flex flex-col gap-y-4">
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
-            <a href="#">topic</a>
+            <a v-for="topic in topicsMenu" href="#">{{ topic.title }}</a>
           </nav>
         </aside>
 
         <!-- Page Content -->
-        <section id="content" class="grow">
+        <section id="content" class="w-full">
           <slot />
         </section>
       </main>

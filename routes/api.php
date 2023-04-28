@@ -20,3 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/subjects', [SubjectsController::class, 'index']);
+
+Route::get('/topics', function () {
+    return file_get_contents(resource_path('data/topics.json'));
+});
