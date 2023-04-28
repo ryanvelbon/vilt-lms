@@ -3,6 +3,11 @@ import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
 const subjects = JSON.parse(localStorage.getItem('subjects'));
+const selectedSubject = ref('math');
+
+function selectSubject(subjectSlug) {
+  selectedSubject.value = subjectSlug;
+}
 
 </script>
 
@@ -10,7 +15,7 @@ const subjects = JSON.parse(localStorage.getItem('subjects'));
   <div>
     <div class="min-h-screen bg-gray-100">
       <nav class="bg-gray-800 px-4 py-3 flex items-center justify-between">
-        <div class="text-white text-xl font-bold">Logo</div>
+        <div class="text-white text-xl font-bold">aptiduo</div>
         <div class="flex md:hidden">
           <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:text-white" aria-label="toggle menu">
             <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
@@ -24,8 +29,17 @@ const subjects = JSON.parse(localStorage.getItem('subjects'));
         </div>
       </nav>
 
-      <nav class="bg-gray-700 text-white flex justify-around py-2">
-        <a v-for="subject in subjects" :key="subject.id" href="#">{{ subject.title }}</a>
+      <nav class="bg-gray-700 text-white flex justify-around">
+        <a
+          v-for="subject in subjects"
+          :key="subject.id"
+          href="#"
+          @click="selectSubject(subject.slug)"
+          class="py-2 grow text-center"
+          :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject }"
+        >
+            {{ subject.title }}
+        </a>
       </nav>
 
       <!-- Page Heading -->
