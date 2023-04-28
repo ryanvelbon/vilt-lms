@@ -42,7 +42,7 @@ function selectSubject(subjectSlug) {
           :key="subject.id"
           href="#"
           @click="selectSubject(subject.slug)"
-          class="py-2 grow text-center"
+          class="py-2 grow text-center hover:bg-gray-600"
           :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject }"
         >
             {{ subject.title }}
@@ -57,9 +57,23 @@ function selectSubject(subjectSlug) {
       </header>
 
       <main class="flex">
-        <aside class="w-64 hidden lg:block bg-gray-200 pl-8 py-8">
+        <aside class="w-80 hidden lg:block bg-gray-200 pl-8 py-8">
           <nav class="flex flex-col gap-y-4">
-            <a v-for="topic in topicsMenu" href="#">{{ topic.title }}</a>
+            <div v-for="topic in topicsMenu">
+              <div v-if="topic.children">
+                <details open>
+                  <summary class="cursor-pointer">{{ topic.title }}</summary>
+                  <nav class="pl-4 py-2">
+                    <div v-for="child in topic.children" class="text-sm py-2">
+                      <a :key="child.title" href="#">{{ child.title }}</a>
+                    </div>
+                  </nav>
+                </details>
+              </div>
+              <div v-else>
+                <a :key="topic.title" href="#">{{ topic.title }}</a>
+              </div>
+            </div>
           </nav>
         </aside>
 
