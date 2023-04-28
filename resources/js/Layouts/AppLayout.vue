@@ -30,9 +30,13 @@ function selectSubject(subjectSlug) {
             </svg>
           </button>
         </div>
-        <div class="hidden md:flex md:items-center">
-          <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">Log in</a>
-          <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">Register</a>
+        <div v-if="$page.props.auth.user" class="hidden md:flex md:items-center">
+          <Link :href="route('dashboard')" class="nav-link">Dashboard</Link>
+          <Link :href="route('logout')" class="nav-link" method="POST" as="button">Log out</Link>
+        </div>
+        <div v-else class="hidden md:flex md:items-center">
+          <Link :href="route('login')" class="nav-link">Log in</Link>
+          <Link :href="route('register')" class="nav-link">Register</Link>
         </div>
       </nav>
 
@@ -85,3 +89,9 @@ function selectSubject(subjectSlug) {
     </div>
   </div>
 </template>
+
+<style>
+.nav-link {
+  @apply text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+}
+</style>
