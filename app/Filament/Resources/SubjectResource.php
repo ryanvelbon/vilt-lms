@@ -12,6 +12,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class SubjectResource extends Resource
 {
@@ -25,6 +26,11 @@ class SubjectResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required()
+                    ->maxLength(255)
+                    ->reactive()
+                    ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                Forms\Components\TextInput::make('slug')
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('icon')
                     ->maxLength(255),
@@ -36,6 +42,7 @@ class SubjectResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('icon'),
             ])
             ->filters([

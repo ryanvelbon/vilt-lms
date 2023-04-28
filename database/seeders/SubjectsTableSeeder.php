@@ -13,9 +13,29 @@ class SubjectsTableSeeder extends Seeder
     {
         DB::table('subjects')->delete();
 
-        Subject::create(['title' => 'Math', 'icon' => 'square-root-variable']);
-        Subject::create(['title' => 'Physics', 'icon' => 'lightbulb-gear']);
-        Subject::create(['title' => 'Biology', 'icon' => 'dna']);
-        Subject::create(['title' => 'Chemistry', 'icon' => 'flask-vial']);
+        Subject::create([
+            'title' => 'Math',
+            'slug' => 'math',
+            'icon' => 'square-root-variable'
+        ]);
+
+        Subject::create([
+            'title' => 'Physics',
+            'slug' => 'physics',
+            'icon' => 'lightbulb-gear'
+        ]);
+
+        Subject::create([
+            'title' => 'Biology',
+            'slug' => 'biology',
+            'icon' => 'dna'
+        ]);
+
+        Subject::create([
+            'title' => 'Chemistry',
+            'slug' => 'chemistry',
+            'icon' => 'flask-vial'
+        ]);
+
     }
 }
