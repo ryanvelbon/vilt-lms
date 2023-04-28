@@ -1,181 +1,173 @@
 {
-  "biology": {
-    "topics": [
-      {
-        "title": "Cell Biology",
-        "subtopics": []
-      },
-      {
-        "title": "Genetics",
-        "subtopics": []
-      },
-      {
-        "title": "Ecology",
-        "subtopics": []
-      }
-    ]
-  },
-  "chemistry": {
-    "topics": [
-      {
-        "title": "Inorganic Chemistry",
-        "subtopics": []
-      },
-      {
-        "title": "Organic Chemistry",
-        "subtopics": []
-      },
-      {
-        "title": "Physical Chemistry",
-        "subtopics": []
-      }
-    ]
-  },
-  "math": {
-    "topics": [
-      {
-        "title": "Arithmetic",
-        "subtopics": [
-          {
-            "title": "integers"
-          },
-          {
-            "title": "fractions"
-          },
-          {
-            "title": "decimal numbers"
-          },
-          {
-            "title": "numerical operations",
-            "subtopics": [
-              {
-                "title": "indices"
-              },
-              {
-                "title": "standard form"
-              }
-            ]
-          },
-          {
-            "title": "percentages"
-          },
-          {
-            "title": "ratios",
-            "subtopics": [
-              {
-                "title": "proportion"
-              },
-              {
-                "title": "rates of change"
-              }
-            ]
-          },
-          {
-            "title": "measurement",
-            "subtopics": [
-              {
-                "title": "metric units"
-              },
-              {
-                "title": "scales"
-              }
-            ]
-          },
-          {
-            "title": "money",
-            "subtopics": [
-              {
-                "title": "currency conversion"
-              },
-              {
-                "title": "simple interest"
-              },
-              {
-                "title": "compound interest"
-              }
-            ]
-          },
-          {
-            "title": "estimation and approximation"
-          },
-          {
-            "title": "calculator"
-          }
-        ]
-      },
-      {
-        "title": "Algebra",
-        "subtopics": [
-          {
-            "title": "algebraic representation"
-          },
-          {
-            "title": "equations and inequalities"
-          },
-          {
-            "title": "formulae"
-          },
-          {
-            "title": "graphs",
-            "subtopics": [
-              {
-                "title": "Cartesian coordinates"
-              },
-              {
-                "title": "y = mx + c"
-              },
-              {
-                "title": "information graphs"
-              }
-            ]
-          },
-          {
-            "title": "indices"
-          },
-          {
-            "title": "sequences",
-            "subtopics": [
-              {
-                "title": "describe the nth term"
-              },
-              {
-                "title": "generate terms of a sequence from the nth term"
-              }
-            ]
-          },
-          {
-            "title": "variation",
-            "subtopics": [
-              {
-                "title": "direct variation"
-              },
-              {
-                "title": "inverse variation"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Geometry",
-        "subtopics": []
-      }
-    ]
-  },
-  "physics": {
-    "topics": [
-      {
-        "title": "Mechanics",
-        "subtopics": []
-      },
-      {
-        "title": "Electricity and Magnetism",
-        "subtopics": []
-      },
-      {
-        "title": "Optics",
-        "subtopics": []
-      }
-    ]
-  }
+  "biology": [
+    {
+      "title": "Cell Biology",
+      "children": []
+    },
+    {
+      "title": "Genetics",
+      "children": []
+    },
+    {
+      "title": "Ecology",
+      "children": []
+    }
+  ],
+  "chemistry": [
+    {
+      "title": "Inorganic Chemistry",
+      "children": []
+    },
+    {
+      "title": "Organic Chemistry",
+      "children": []
+    },
+    {
+      "title": "Physical Chemistry",
+      "children": []
+    }
+  ],
+  "math": [
+    {
+      "title": "Arithmetic",
+      "children": [
+        {
+          "title": "integers"
+        },
+        {
+          "title": "fractions"
+        },
+        {
+          "title": "decimal numbers"
+        },
+        {
+          "title": "numerical operations",
+          "children": [
+            {
+              "title": "indices"
+            },
+            {
+              "title": "standard form"
+            }
+          ]
+        },
+        {
+          "title": "percentages"
+        },
+        {
+          "title": "ratios",
+          "children": [
+            {
+              "title": "proportion"
+            },
+            {
+              "title": "rates of change"
+            }
+          ]
+        },
+        {
+          "title": "measurement",
+          "children": [
+            {
+              "title": "metric units"
+            },
+            {
+              "title": "scales"
+            }
+          ]
+        },
+        {
+          "title": "money",
+          "children": [
+            {
+              "title": "currency conversion"
+            },
+            {
+              "title": "simple interest"
+            },
+            {
+              "title": "compound interest"
+            }
+          ]
+        },
+        {
+          "title": "estimation and approximation"
+        },
+        {
+          "title": "calculator"
+        }
+      ]
+    },
+    {
+      "title": "Algebra",
+      "children": [
+        {
+          "title": "algebraic representation"
+        },
+        {
+          "title": "equations and inequalities"
+        },
+        {
+          "title": "formulae"
+        },
+        {
+          "title": "graphs",
+          "children": [
+            {
+              "title": "Cartesian coordinates"
+            },
+            {
+              "title": "y = mx + c"
+            },
+            {
+              "title": "information graphs"
+            }
+          ]
+        },
+        {
+          "title": "indices"
+        },
+        {
+          "title": "sequences",
+          "children": [
+            {
+              "title": "describe the nth term"
+            },
+            {
+              "title": "generate terms of a sequence from the nth term"
+            }
+          ]
+        },
+        {
+          "title": "variation",
+          "children": [
+            {
+              "title": "direct variation"
+            },
+            {
+              "title": "inverse variation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Geometry",
+      "children": []
+    }
+  ],
+  "physics": [
+    {
+      "title": "Mechanics",
+      "children": []
+    },
+    {
+      "title": "Electricity and Magnetism",
+      "children": []
+    },
+    {
+      "title": "Optics",
+      "children": []
+    }
+  ]
 }

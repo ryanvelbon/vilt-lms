@@ -12,7 +12,7 @@ const selectedSubject = ref('math');
 function selectSubject(subjectSlug) {
   selectedSubject.value = subjectSlug;
 
-  topicsMenu = topics[subjectSlug].topics;
+  topicsMenu = topics[subjectSlug];
 
 }
 
