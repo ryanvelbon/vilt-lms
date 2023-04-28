@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
+const subjects = JSON.parse(localStorage.getItem('subjects'));
+
 </script>
 
 <template>
@@ -23,10 +25,7 @@ import { Link } from '@inertiajs/vue3';
       </nav>
 
       <nav class="bg-gray-700 text-white flex justify-around py-2">
-        <a href="#">English</a>
-        <a href="#">German</a>
-        <a href="#">French</a>
-        <a href="#">Italian</a>
+        <a v-for="subject in subjects" :key="subject.id" href="#">{{ subject.title }}</a>
       </nav>
 
       <!-- Page Heading -->
@@ -37,7 +36,7 @@ import { Link } from '@inertiajs/vue3';
       </header>
 
       <main class="flex">
-        <aside class="w-64 hidden xl:block bg-gray-200 pl-8 py-8">
+        <aside class="w-64 hidden lg:block bg-gray-200 pl-8 py-8">
           <nav class="flex flex-col gap-y-4">
             <a href="#">topic</a>
             <a href="#">topic</a>
