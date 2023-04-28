@@ -177,16 +177,16 @@
           ]
         },
         {
-          "title": "variation",
-          "slug": "",
+          "title": "Variation",
+          "slug": "variation",
           "children": [
             {
-              "title": "direct variation",
-              "slug": ""
+              "title": "Direct Variation",
+              "slug": "direct-variation"
             },
             {
-              "title": "inverse variation",
-              "slug": ""
+              "title": "Inverse Variation",
+              "slug": "inverse-variation"
             }
           ]
         }
@@ -194,8 +194,129 @@
     },
     {
       "title": "Geometry",
-      "slug": "",
-      "children": []
+      "slug": "geometry",
+      "children": [
+        {
+          "title": "Euclidean Geometry",
+          "slug": "euclidean-geometry",
+          "children": [
+            {
+              "title": "Angles",
+              "slug": "angles"
+            },
+            {
+              "title": "Lines and Line Segments",
+              "slug": "lines-and-line-segments"
+            },
+            {
+              "title": "Triangles",
+              "slug": "triangles",
+              "children": [
+                {
+                  "title": "Right Angled Triangle",
+                  "slug": "right-angled-triangle"
+                },
+                {
+                  "title": "Equilateral Triangle",
+                  "slug": "equilateral-triangle"
+                },
+                {
+                  "title": "Isosceles Triangle",
+                  "slug": "isosceles-triangle"
+                },
+                {
+                  "title": "Scalene Triangle",
+                  "slug": "scalene-triangle"
+                }
+              ]
+            },
+            {
+              "title": "Quadrilaterals",
+              "slug": "quadrilaterals",
+              "children": [
+                {
+                  "title": "Square",
+                  "slug": "square"
+                },
+                {
+                  "title": "Rectangle",
+                  "slug": "rectangle"
+                },
+                {
+                  "title": "Trapezium",
+                  "slug": "trapezium"
+                },
+                {
+                  "title": "Rhombus",
+                  "slug": "rhombus"
+                },
+                {
+                  "title": "Parallelogram",
+                  "slug": "parallelogram"
+                }
+              ]
+            },
+            {
+              "title": "Polygons",
+              "slug": "polygons",
+              "children": [
+                {
+                  "title": "Pentagon",
+                  "slug": "pentagon"
+                },
+                {
+                  "title": "Hexagon",
+                  "slug": "hexagon"
+                },
+                {
+                  "title": "Heptagon",
+                  "slug": "heptagon"
+                },
+                {
+                  "title": "Octagon",
+                  "slug": "octagon"
+                },
+                {
+                  "title": "Nonagon",
+                  "slug": "nonagon"
+                },
+                {
+                  "title": "Decagon",
+                  "slug": "decagon"
+                }
+              ]
+            },
+            {
+              "title": "Circles",
+              "slug": "circles"
+            }
+          ]
+        },
+        {
+          "title": "Constructions",
+          "slug": "constructions"
+        },
+        {
+          "title": "Mensuration",
+          "slug": "mensuration"
+        },
+        {
+          "title": "Trigonometry",
+          "slug": "trigonometry"
+        },
+        {
+          "title": "Bearings",
+          "slug": "bearings"
+        },
+        {
+          "title": "Transformations",
+          "slug": "transformations"
+        },
+        {
+          "title": "Loci",
+          "slug": "loci"
+        }
+      ]
     }
   ],
   "physics": [
