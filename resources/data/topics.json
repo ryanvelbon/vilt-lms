@@ -2,150 +2,191 @@
   "biology": [
     {
       "title": "Cell Biology",
+      "slug": "",
       "children": []
     },
     {
       "title": "Genetics",
+      "slug": "",
       "children": []
     },
     {
       "title": "Ecology",
+      "slug": "",
       "children": []
     }
   ],
   "chemistry": [
     {
       "title": "Inorganic Chemistry",
+      "slug": "",
       "children": []
     },
     {
       "title": "Organic Chemistry",
+      "slug": "",
       "children": []
     },
     {
       "title": "Physical Chemistry",
+      "slug": "",
       "children": []
     }
   ],
   "math": [
     {
       "title": "Arithmetic",
+      "slug": "",
       "children": [
         {
-          "title": "integers"
+          "title": "Integers",
+          "slug": "integers"
         },
         {
-          "title": "fractions"
+          "title": "Fractions",
+          "slug": "fractions"
         },
         {
-          "title": "decimal numbers"
+          "title": "Decimal Numbers",
+          "slug": "decimal-numbers"
         },
         {
-          "title": "numerical operations",
+          "title": "Numerical Operations",
+          "slug": "numerical-operations",
           "children": [
             {
-              "title": "indices"
+              "title": "Indices",
+              "slug": "indices"
             },
             {
-              "title": "standard form"
+              "title": "Standard Form",
+              "slug": "standard-form"
             }
           ]
         },
         {
-          "title": "percentages"
+          "title": "Percentages",
+          "slug": "percentages"
         },
         {
-          "title": "ratios",
+          "title": "Ratios",
+          "slug": "ratios",
           "children": [
             {
-              "title": "proportion"
+              "title": "Proportion",
+              "slug": "proportion"
             },
             {
-              "title": "rates of change"
+              "title": "Rates of Change",
+              "slug": "rates-of-change"
             }
           ]
         },
         {
-          "title": "measurement",
+          "title": "Measurement",
+          "slug": "measurement",
           "children": [
             {
-              "title": "metric units"
+              "title": "Metric Units",
+              "slug": "metric-units"
             },
             {
-              "title": "scales"
+              "title": "Scales",
+              "slug": "scales"
             }
           ]
         },
         {
-          "title": "money",
+          "title": "Money",
+          "slug": "money",
           "children": [
             {
-              "title": "currency conversion"
+              "title": "Currency Conversion",
+              "slug": "currency-conversion"
             },
             {
-              "title": "simple interest"
+              "title": "Simple Interest",
+              "slug": "simple-interest"
             },
             {
-              "title": "compound interest"
+              "title": "Compound Interest",
+              "slug": "compound-interest"
             }
           ]
         },
         {
-          "title": "estimation and approximation"
+          "title": "Estimation & Approximation",
+          "slug": "estimation-and-approximation"
         },
         {
-          "title": "calculator"
+          "title": "Calculator",
+          "slug": "calculator"
         }
       ]
     },
     {
       "title": "Algebra",
+      "slug": "algebra",
       "children": [
         {
-          "title": "algebraic representation"
+          "title": "Algebraic Representation",
+          "slug": "algebraic-representation"
         },
         {
-          "title": "equations and inequalities"
+          "title": "equations and inequalities",
+          "slug": ""
         },
         {
-          "title": "formulae"
+          "title": "Formulae",
+          "slug": "formulae"
         },
         {
-          "title": "graphs",
+          "title": "Graphs",
+          "slug": "graphs",
           "children": [
             {
-              "title": "Cartesian coordinates"
+              "title": "Cartesian coordinates",
+              "slug": ""
             },
             {
-              "title": "y = mx + c"
+              "title": "y = mx + c",
+              "slug": "equation-of-a-straight-line"
             },
             {
-              "title": "information graphs"
+              "title": "Information Graphs",
+              "slug": "information-graphs"
             }
           ]
         },
         {
-          "title": "indices"
+          "title": "indices",
+          "slug": "algebraic-indices"
         },
         {
-          "title": "sequences",
+          "title": "Sequences",
+          "slug": "",
           "children": [
             {
-              "title": "describe the nth term"
+              "title": "describe the nth term",
+              "slug": ""
             },
             {
-              "title": "generate terms of a sequence from the nth term"
+              "title": "generate terms of a sequence from the nth term",
+              "slug": ""
             }
           ]
         },
         {
           "title": "variation",
+          "slug": "",
           "children": [
             {
-              "title": "direct variation"
+              "title": "direct variation",
+              "slug": ""
             },
             {
-              "title": "inverse variation"
+              "title": "inverse variation",
+              "slug": ""
             }
           ]
         }
@@ -153,20 +194,24 @@
     },
     {
       "title": "Geometry",
+      "slug": "",
       "children": []
     }
   ],
   "physics": [
     {
       "title": "Mechanics",
+      "slug": "",
       "children": []
     },
     {
       "title": "Electricity and Magnetism",
+      "slug": "",
       "children": []
     },
     {
       "title": "Optics",
+      "slug": "",
       "children": []
     }
   ]
