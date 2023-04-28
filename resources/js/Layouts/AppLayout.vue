@@ -36,9 +36,27 @@ import { Link } from '@inertiajs/vue3';
                 </div>
             </header>
 
-            <!-- Page Content -->
-            <main>
+            <main class="flex">
+              <aside class="w-64 hidden xl:block bg-gray-200 pl-8 py-8">
+                <!-- Secondary column (hidden on smaller screens) -->
+                <nav class="flex flex-col gap-y-4">
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                  <a href="#">topic</a>
+                </nav>
+              </aside>
+
+              <!-- Page Content -->
+              <section id="content" class="grow">
                 <slot />
+              </section>
             </main>
         </div>
     </div>
