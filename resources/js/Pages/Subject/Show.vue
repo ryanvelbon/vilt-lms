@@ -8,9 +8,10 @@ const props = defineProps({
 
 <template>
   <AppLayout :selectedSubject="subject.slug">
-    <div>
-      <h1 class="text-2xl font-bold p-8">{{ subject.title }}</h1>
-    </div>
+    <template #header>
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ subject.title }}</h2>
+    </template>
+
     <div class="p-8">
       <h2 class="text-xl">Tutors</h2>
       <div class="grid grid-cols-2 gap-4">

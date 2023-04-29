@@ -18,25 +18,162 @@
   ],
   "chemistry": [
     {
-      "title": "Inorganic Chemistry",
-      "slug": "",
-      "children": []
+      "title": "Atomic Theory",
+      "slug": "atomic-theory",
+      "children": [
+        {
+          "title": "Subatomic Particles",
+          "slug": "subatomic-particles"
+        },
+        {
+          "title": "Atomic Structure",
+          "slug": "atomic-structure"
+        },
+        {
+          "title": "Isotopes",
+          "slug": "isotopes"
+        }
+      ]
+    },
+    {
+      "title": "Chemical Bonding",
+      "slug": "chemical-bonding",
+      "children": [
+        {
+          "title": "Ionic Bonding",
+          "slug": "ionic-bonding"
+        },
+        {
+          "title": "Covalent Bonding",
+          "slug": "covalent-bonding"
+        },
+        {
+          "title": "Metallic Bonding",
+          "slug": "metallic-bonding"
+        }
+      ]
+    },
+    {
+      "title": "Chemical Reactions",
+      "slug": "chemical-reactions",
+      "children": [
+        {
+          "title": "Types of Chemical Reactions",
+          "slug": "types-of-chemical-reactions"
+        },
+        {
+          "title": "Reaction Stoichiometry",
+          "slug": "reaction-stoichiometry"
+        },
+        {
+          "title": "Energy in Chemical Reactions",
+          "slug": "energy-in-chemical-reactions"
+        }
+      ]
+    },
+    {
+      "title": "States of Matter",
+      "slug": "states-of-matter",
+      "children": [
+        {
+          "title": "Gases",
+          "slug": "gases"
+        },
+        {
+          "title": "Liquids",
+          "slug": "liquids"
+        },
+        {
+          "title": "Solids",
+          "slug": "solids"
+        },
+        {
+          "title": "Changes of State",
+          "slug": "changes-of-state"
+        }
+      ]
+    },
+    {
+      "title": "Solutions and Concentration",
+      "slug": "solutions-and-concentration",
+      "children": [
+        {
+          "title": "Types of Solutions",
+          "slug": "types-of-solutions"
+        },
+        {
+          "title": "Solubility",
+          "slug": "solubility"
+        },
+        {
+          "title": "Concentration",
+          "slug": "concentration"
+        }
+      ]
+    },
+    {
+      "title": "Acids and Bases",
+      "slug": "acids-and-bases",
+      "children": [
+        {
+          "title": "Definitions of Acids and Bases",
+          "slug": "definitions-of-acids-and-bases"
+        },
+        {
+          "title": "Properties of Acids and Bases",
+          "slug": "properties-of-acids-and-bases"
+        },
+        {
+          "title": "Acid-Base Equilibria",
+          "slug": "acid-base-equilibria"
+        }
+      ]
+    },
+    {
+      "title": "Chemical Equilibrium",
+      "slug": "chemical-equilibrium",
+      "children": [
+        {
+          "title": "Equilibrium Constant",
+          "slug": "equilibrium-constant"
+        },
+        {
+          "title": "Le Chatelier's Principle",
+          "slug": "le-chateliers-principle"
+        },
+        {
+          "title": "Acid-Base Equilibria",
+          "slug": "acid-base-equilibria"
+        }
+      ]
     },
     {
       "title": "Organic Chemistry",
-      "slug": "",
-      "children": []
-    },
-    {
-      "title": "Physical Chemistry",
-      "slug": "",
-      "children": []
+      "slug": "organic-chemistry",
+      "children": [
+        {
+          "title": "Hydrocarbons",
+          "slug": "hydrocarbons"
+        },
+        {
+          "title": "Functional Groups",
+          "slug": "functional-groups"
+        },
+        {
+          "title": "Isomerism",
+          "slug": "isomerism"
+        },
+        {
+          "title": "Polymerization",
+          "slug": "polymerization"
+        }
+      ]
     }
   ],
   "math": [
     {
       "title": "Arithmetic",
-      "slug": "",
+      "slug": "arithmetic",
       "children": [
         {
           "title": "Integers",
