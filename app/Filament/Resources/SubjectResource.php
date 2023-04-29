@@ -43,6 +43,9 @@ class SubjectResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('slug'),
+                Tables\Columns\TextColumn::make('tutors_count')
+                    ->counts('tutors')
+                    ->label('Tutors'),
                 Tables\Columns\TextColumn::make('icon'),
             ])
             ->filters([
