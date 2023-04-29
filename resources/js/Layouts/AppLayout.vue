@@ -5,16 +5,15 @@ import { Link } from '@inertiajs/vue3';
 const subjects = JSON.parse(localStorage.getItem('subjects'));
 const topics = JSON.parse(localStorage.getItem('topics'));
 
-let topicsMenu = topics['math'];
+const props = defineProps({
+  selectedSubject: {
+    type: String,
+    default: 'math',
 
-const selectedSubject = ref('math');
+  },
+})
 
-function selectSubject(subjectSlug) {
-  selectedSubject.value = subjectSlug;
-
-  topicsMenu = topics[subjectSlug];
-
-}
+let topicsMenu = topics[props.selectedSubject]
 
 </script>
 
@@ -45,7 +44,6 @@ function selectSubject(subjectSlug) {
           v-for="subject in subjects"
           :key="subject.id"
           :href="route('subjects.show', { slug: subject.slug })"
-          @click="selectSubject(subject.slug)"
           class="py-2 grow text-center hover:bg-gray-600"
           :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject }"
         >
