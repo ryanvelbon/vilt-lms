@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Subject;
+use App\Models\Tutor;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -19,5 +21,14 @@ class TutorFactory extends Factory
             'pic' => fake()->imageUrl(),
             'website' => Str::slug($name) . ".com",
         ];
+    }
+
+    public function configure()
+    {
+        return $this->afterCreating(function (Tutor $tutor) {
+            $nSubjects = rand(1, 100) <= 90 ? 1 : 2;
+            $subjects = Subject::inRandomOrder()->limit($nSubjects)->get()->pluck('id');
+            $tutor->subjects()->attach($subjects);
+        });
     }
 }
