@@ -41,16 +41,16 @@ function selectSubject(subjectSlug) {
       </nav>
 
       <nav class="bg-gray-700 text-white flex justify-around">
-        <a
+        <Link
           v-for="subject in subjects"
           :key="subject.id"
-          href="#"
+          :href="route('subjects.show', { slug: subject.slug })"
           @click="selectSubject(subject.slug)"
           class="py-2 grow text-center hover:bg-gray-600"
           :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject }"
         >
             {{ subject.title }}
-        </a>
+        </Link>
       </nav>
 
       <!-- Page Heading -->
