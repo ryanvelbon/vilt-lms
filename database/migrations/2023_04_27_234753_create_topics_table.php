@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('icon')->nullable();
             $table->foreignId('subject_id')->constrained()->onDelete('CASCADE');
             $table->foreignId('parent_id')->nullable()->constrained('topics')->onDelete('CASCADE');
-            $table->timestamps();
 
             $table->unique(['title', 'subject_id']);
         });
