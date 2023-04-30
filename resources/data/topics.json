@@ -1,18 +1,18 @@
 {
   "biology": [
     {
-      "title": "Cell Biology",
-      "slug": "",
+      "title": "Cellular Biology",
+      "slug": "cellular-biology",
       "children": []
     },
     {
       "title": "Genetics",
-      "slug": "",
+      "slug": "genetics",
       "children": []
     },
     {
       "title": "Ecology",
-      "slug": "",
+      "slug": "ecology",
       "children": []
     }
   ],
@@ -140,10 +140,6 @@
         {
           "title": "Le Chatelier's Principle",
           "slug": "le-chateliers-principle"
-        },
-        {
-          "title": "Acid-Base Equilibria",
-          "slug": "acid-base-equilibria"
         }
       ]
     },
@@ -270,8 +266,8 @@
           "slug": "algebraic-representation"
         },
         {
-          "title": "equations and inequalities",
-          "slug": ""
+          "title": "Equations & Inequalities",
+          "slug": "equations-and-inequalities"
         },
         {
           "title": "Formulae",
@@ -283,7 +279,7 @@
           "children": [
             {
               "title": "Cartesian coordinates",
-              "slug": ""
+              "slug": "cartesian-coordinates"
             },
             {
               "title": "y = mx + c",
@@ -296,20 +292,20 @@
           ]
         },
         {
-          "title": "indices",
+          "title": "Algebraic Indices",
           "slug": "algebraic-indices"
         },
         {
           "title": "Sequences",
-          "slug": "",
+          "slug": "sequences",
           "children": [
             {
               "title": "describe the nth term",
-              "slug": ""
+              "slug": "describing-the-n-th-term"
             },
             {
               "title": "generate terms of a sequence from the nth term",
-              "slug": ""
+              "slug": "calculate-the-n-th-term"
             }
           ]
         },
@@ -459,17 +455,17 @@
   "physics": [
     {
       "title": "Mechanics",
-      "slug": "",
+      "slug": "mechanics",
       "children": []
     },
     {
       "title": "Electricity and Magnetism",
-      "slug": "",
+      "slug": "electricity-and-magnetism",
       "children": []
     },
     {
       "title": "Optics",
-      "slug": "",
+      "slug": "optics",
       "children": []
     }
   ]

@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersTableSeeder::class,
             SubjectsTableSeeder::class,
+            TopicsTableSeeder::class,
             TutorsTableSeeder::class,
         ]);
     }
