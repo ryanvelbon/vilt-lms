@@ -44,16 +44,16 @@ let topicsMenu = topics[props.selectedSubject]
           v-for="subject in subjects"
           :key="subject.id"
           :href="route('subjects.show', { slug: subject.slug })"
-          class="py-2 grow text-center hover:bg-gray-600"
-          :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject }"
+          class="py-2 grow text-center"
+          :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject, 'hover:bg-gray-600': subject.slug !== selectedSubject }"
         >
-            {{ subject.title }}
+          {{ subject.title }}
         </Link>
       </nav>
 
       <!-- Page Heading -->
       <header class="bg-white shadow" v-if="$slots.header">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <slot name="header" />
         </div>
       </header>
