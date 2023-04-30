@@ -30,4 +30,13 @@ class Subject extends Model
     {
         return $this->belongsToMany(Tutor::class);
     }
+
+    public function getTopicsTreeAttribute()
+    {
+        return generateNestedArray(
+                Topic::where('subject_id', $this->id)
+                    ->get()
+                    ->toArray()
+                );
+    }
 }

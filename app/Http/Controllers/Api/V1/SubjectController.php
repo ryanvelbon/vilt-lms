@@ -22,11 +22,7 @@ class SubjectController extends Controller
         $nested = $request->boolean('nested', true);
 
         if ($nested) {
-            $subject->topics = generateNestedArray(
-                Topic::where('subject_id', $subject->id)
-                    ->get()
-                    ->toArray()
-                );
+            $subject->topics = $subject->topicsTree;
         } else {
             $subject->load('topics');
         }
