@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SubjectResource;
 use App\Models\Subject;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
@@ -14,5 +15,22 @@ class SubjectController extends Controller
         $subjects = Subject::all();
 
         return SubjectResource::collection($subjects);
+    }
+
+    public function show(Request $request, Subject $subject)
+    {
+        $nested = $request->boolean('nested', true);
+
+        if ($nested) {
+            $subject->topics = generateNestedArray(
+                Topic::where('subject_id', $subject->id)
+                    ->get()
+                    ->toArray()
+                );
+        } else {
+            $subject->load('topics');
+        }
+
+        return $subject;
     }
 }

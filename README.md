@@ -4,6 +4,17 @@ aptiduo is an educational platform that provides resources for STEM subjects at 
 
 ## Features
 
+### API
+
+Retrieve a subject with its topics in a nested structure.
+
+    /api/subjects/math
+
+Retrieve a subject with its topics in a flat structure.
+
+    /api/subjects/math?nested=false
+
+
 ### Admin
 
 - Admin can manage User, Tutor, Subject
