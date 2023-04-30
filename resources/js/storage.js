@@ -1,19 +1,15 @@
-let appStorage = {};
-
-function fetchData(url, key) {
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      appStorage[key] = data;
-      localStorage.setItem(key, JSON.stringify(data));
-    })
-    .catch(error => console.error(`Error fetching ${key}: `, error));
-}
+let appStorage = {}
 
 // Fetch all the necessary data when the page loads
 window.addEventListener('load', () => {
-  fetchData('/api/subjects', 'subjects');
-  fetchData('/api/topics', 'topics');
+  fetch('/api/subjects')
+    .then(response => response.json())
+    .then(data => {
+      // appStorage['subjects'] = data
+      localStorage.setItem('subjects', JSON.stringify(data))
+    })
+    .catch(error => console.error("Error!", error))
 });
 
-export { appStorage };
+
+export { appStorage }

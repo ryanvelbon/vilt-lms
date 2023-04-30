@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <AppLayout :selectedSubject="subject.slug">
+  <AppLayout :selectedSubjectSlug="subject.slug">
     <template #header>
       <div class="flex justify-between">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ subject.title }}</h2>

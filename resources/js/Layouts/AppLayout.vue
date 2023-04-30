@@ -3,17 +3,16 @@ import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
 const subjects = JSON.parse(localStorage.getItem('subjects'));
-const topics = JSON.parse(localStorage.getItem('topics'));
 
 const props = defineProps({
-  selectedSubject: {
+  selectedSubjectSlug: {
     type: String,
     default: 'math',
 
   },
 })
 
-let topicsMenu = topics[props.selectedSubject]
+let selectedSubject = subjects.filter(subject => subject.slug === props.selectedSubjectSlug)[0]
 
 </script>
 
@@ -45,7 +44,7 @@ let topicsMenu = topics[props.selectedSubject]
           :key="subject.id"
           :href="route('subjects.show', { slug: subject.slug })"
           class="py-2 grow text-center"
-          :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubject, 'hover:bg-gray-600': subject.slug !== selectedSubject }"
+          :class="{ 'bg-yellow-300 text-black': subject.slug === selectedSubjectSlug, 'hover:bg-gray-600': subject.slug !== selectedSubjectSlug }"
         >
           {{ subject.title }}
         </Link>
@@ -61,7 +60,7 @@ let topicsMenu = topics[props.selectedSubject]
       <main class="flex">
         <aside class="w-80 hidden lg:block bg-gray-200 pl-8 py-8">
           <nav class="flex flex-col gap-y-4">
-            <div v-for="topic in topicsMenu">
+            <div v-for="topic in selectedSubject.topics">
               <div v-if="topic.children">
                 <details open>
                   <summary class="cursor-pointer">{{ topic.title }}</summary>
