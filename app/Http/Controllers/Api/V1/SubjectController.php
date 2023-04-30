@@ -16,17 +16,4 @@ class SubjectController extends Controller
 
         return SubjectResource::collection($subjects);
     }
-
-    public function show(Request $request, Subject $subject)
-    {
-        $nested = $request->boolean('nested', true);
-
-        if ($nested) {
-            $subject->topics = $subject->topicsTree;
-        } else {
-            $subject->load('topics');
-        }
-
-        return $subject;
-    }
 }

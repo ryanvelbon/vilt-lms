@@ -20,4 +20,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/subjects', [SubjectController::class, 'index']);
-Route::get('/subjects/{subject:slug}', [SubjectController::class, 'show']);
