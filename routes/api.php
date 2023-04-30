@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\V1\SubjectsController;
+use App\Http\Controllers\Api\V1\SubjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/subjects', [SubjectsController::class, 'index']);
+Route::get('/subjects', [SubjectController::class, 'index']);
 
 Route::get('/topics', function () {
     return file_get_contents(resource_path('data/topics.json'));
