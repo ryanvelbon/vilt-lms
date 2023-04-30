@@ -1,0 +1,13 @@
+hours: 7
+inspiration:
+  - w3schools.com
+  - 
+technical_decisions:
+  - title: 'Storing quizzes as YAML files'
+    reasons:
+      - 'can be easily version controlled'
+      - 'can easily generate quizzes using ChatGPT'
+      - 'faster to fetch'
+ideas:
+  - tutors can teach on the platform and market themselves by creating content (e.g., lessons, quizzes, etc.)
+  - student can follow Tutor
