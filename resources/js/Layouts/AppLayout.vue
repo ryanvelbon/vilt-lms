@@ -66,7 +66,12 @@ let selectedSubject = subjects.filter(subject => subject.slug === props.selected
                   <summary class="cursor-pointer">{{ topic.title }}</summary>
                   <nav class="pl-4 py-2">
                     <div v-for="child in topic.children" class="text-sm py-2">
-                      <a :key="child.title" href="#">{{ child.title }}</a>
+                      <Link
+                        :key="child.title"
+                        :href="route('topics.show', { slug: child.slug })"
+                      >
+                        {{ child.title }}
+                      </Link>
                     </div>
                   </nav>
                 </details>
