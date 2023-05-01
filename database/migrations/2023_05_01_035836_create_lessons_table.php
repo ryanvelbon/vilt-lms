@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('tutor_id')->constrained()->onDelete('CASCADE');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
