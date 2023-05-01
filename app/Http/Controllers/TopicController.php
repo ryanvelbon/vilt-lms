@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\TopicResource;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -9,11 +10,9 @@ use Inertia\Inertia;
 class TopicController extends Controller
 {
     public function show(Topic $topic)
-    {        
-        $topic->load('subject', 'children');
-
+    {
         return Inertia::render('Topic/Show', [
-            'topic' => $topic
+            'topic' => new TopicResource($topic)
         ]);
     }
 }
