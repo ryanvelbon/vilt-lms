@@ -27,6 +27,7 @@ class LessonFactory extends Factory
             'level' => $this->faker->numberBetween(1, 7),
             'topic_id' => Topic::inRandomOrder()->first(),
             'tutor_id' => Tutor::inRandomOrder()->first(),
+            'status' => 'published',
             'published_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }

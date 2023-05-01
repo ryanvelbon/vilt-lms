@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedTinyInteger('level')->nullable();
             $table->foreignId('topic_id')->constrained()->onDelete('CASCADE');
             $table->foreignId('tutor_id')->constrained()->onDelete('CASCADE');
+            $table->string('status')->default('draft');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();

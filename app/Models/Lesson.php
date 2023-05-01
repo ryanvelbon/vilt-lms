@@ -20,6 +20,7 @@ class Lesson extends Model
         'level',
         'topic_id',
         'tutor_id',
+        'status',
         'published_at',
     ];
 

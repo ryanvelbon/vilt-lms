@@ -58,6 +58,14 @@ class LessonResource extends Resource
                     )
                     ->maxLength(255),
                 Forms\Components\Toggle::make('level'),
+                Forms\Components\Radio::make('status')
+                    ->options([
+                        'draft' => 'Draft',
+                        'review' => 'Review',
+                        'scheduled' => 'Scheduled',
+                        'published' => 'Published',
+                        'archived' => 'Archived'
+                    ]),
                 Forms\Components\DateTimePicker::make('published_at'),
             ]);
     }
@@ -77,6 +85,15 @@ class LessonResource extends Resource
                     ->boolean()
                     ->label('Video'),
                 Tables\Columns\TextColumn::make('level'),
+                Tables\Columns\BadgeColumn::make('status')
+                    ->colors([
+                        'warning'    => 'draft',
+                        'primary'    => 'review',
+                        'secondary'  => 'scheduled',
+                        'success'    => 'published',
+                        'danger'     => 'archived',
+                    ])
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
                     ->size('sm')
