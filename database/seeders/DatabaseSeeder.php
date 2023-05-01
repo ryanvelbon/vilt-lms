@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             SubjectsTableSeeder::class,
             TopicsTableSeeder::class,
             TutorsTableSeeder::class,
+            LessonsTableSeeder::class,
         ]);
     }
 }
