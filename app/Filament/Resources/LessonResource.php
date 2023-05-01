@@ -5,41 +5,57 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\LessonResource\Pages;
 use App\Filament\Resources\LessonResource\RelationManagers;
 use App\Models\Lesson;
+use App\Models\Topic;
 use Filament\Forms;
+use Filament\Forms\Components\Actions\Action;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class LessonResource extends Resource
 {
     protected static ?string $model = Lesson::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-bar';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\Select::make('topic_id')
-                    ->relationship('topic', 'title')
+                    ->label('Topic')
+                    ->searchable()
+                    ->getSearchResultsUsing(fn (string $search) => Topic::where('title', 'like', "%{$search}%")->limit(50)->pluck('title', 'id'))
+                    ->getOptionLabelUsing(fn ($value): ?string => Topic::find($value)?->title)
                     ->required(),
                 Forms\Components\Select::make('tutor_id')
                     ->relationship('tutor', 'name')
                     ->required(),
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->reactive()
+                    ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('content')
-                    ->required(),
+                Forms\Components\RichEditor::make('content'),
                 Forms\Components\TextInput::make('video_url')
+                    ->url()
+                    ->suffixAction(fn (?string $state): Action =>
+                        Action::make('visit')
+                            ->icon('heroicon-s-external-link')
+                            ->url(
+                                filled($state) ? "https://{$state}" : null,
+                                shouldOpenInNewTab: true,
+                            ),
+                    )
                     ->maxLength(255),
                 Forms\Components\Toggle::make('level'),
                 Forms\Components\DateTimePicker::make('published_at'),
@@ -50,23 +66,33 @@ class LessonResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('topic.title'),
+                Tables\Columns\TextColumn::make('title')
+                    ->size('sm'),
+                Tables\Columns\TextColumn::make('topic.subject.title'),
                 Tables\Columns\TextColumn::make('tutor.name'),
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('content'),
-                Tables\Columns\TextColumn::make('video_url'),
-                Tables\Columns\IconColumn::make('level')
-                    ->boolean(),
+                Tables\Columns\TextColumn::make('slug')
+                    ->size('sm')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\IconColumn::make('video_url')
+                    ->boolean()
+                    ->label('Video'),
+                Tables\Columns\TextColumn::make('level'),
                 Tables\Columns\TextColumn::make('published_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->size('sm')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->size('sm')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->size('sm')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('deleted_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->size('sm')
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),

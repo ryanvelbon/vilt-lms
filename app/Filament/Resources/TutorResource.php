@@ -17,7 +17,7 @@ class TutorResource extends Resource
 {
     protected static ?string $model = Tutor::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
 
     public static function form(Form $form): Form
     {
@@ -48,6 +48,9 @@ class TutorResource extends Resource
                     ->searchable(),
                 Tables\Columns\TagsColumn::make('subjects.title')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('lessons_count')
+                    ->counts('lessons')
+                    ->label('Lessons'),
                 Tables\Columns\TextColumn::make('user.email')
                     ->size('sm'),
                 Tables\Columns\TextColumn::make('website')

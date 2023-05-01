@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->longText('content');
+            $table->longText('content')->nullable();
             $table->string('video_url')->nullable();
             $table->unsignedTinyInteger('level')->nullable();
             $table->foreignId('topic_id')->constrained()->onDelete('CASCADE');
