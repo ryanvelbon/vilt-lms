@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TopicController;
@@ -42,3 +43,5 @@ require __DIR__.'/auth.php';
 Route::get('/subjects/{subject:slug}', [SubjectController::class, 'show'])->name('subjects.show');
 
 Route::get('/topics/{topic:slug}', [TopicController::class, 'show'])->name('topics.show');
+
+Route::get('/lessons/{lesson:slug}', [LessonController::class, 'show'])->name('lessons.show');

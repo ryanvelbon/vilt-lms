@@ -10,6 +10,8 @@ const props = defineProps({
 
 <template>
   <AppLayout :selectedSubjectSlug="topic.subject.slug">
+
+    <!-- Header -->
     <template #header>
       <div class="flex justify-between">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ topic.title }}</h2>
@@ -31,5 +33,21 @@ const props = defineProps({
         </div>
       </div>
     </template>
+
+    <!-- Lessons -->
+    <section class="bg-pink-200">
+      <h3 class="text-lg font-bold">Lessons</h3>  
+      <div v-if="topic.lessons.length > 0" class="mx-auto max-w-xl">
+        <div v-for="lesson in topic.lessons" class="bg-gray-300 mb-4">
+          <Link :href="route('lessons.show', { slug: lesson.slug })">
+            {{ lesson }}
+          </Link>
+        </div>
+      </div>
+      <div v-else class="py-12 text-center text-gray-600">
+        No lessons have been published for this topic yet.
+      </div>
+    </section>
+
   </AppLayout>
 </template>
