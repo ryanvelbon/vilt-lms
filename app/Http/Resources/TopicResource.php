@@ -35,7 +35,7 @@ class TopicResource extends JsonResource
                     'slug'         => $lesson->slug,
                     'description'  => $lesson->description,
                     'level'        => $lesson->level,
-                    'published_at' => $lesson->published_at->format('Y-m-d'),
+                    'published_at' => $lesson->published_at ? $lesson->published_at->format('Y-m-d') : null,
                 ];
             }),
         ];
