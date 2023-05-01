@@ -18,7 +18,7 @@ class LessonResource extends JsonResource
             'video_url'    => $this->video_url,
             'level'        => $this->level,
             'status'       => $this->status,
-            'published_at' => $this->published_at,
+            'published_at' => $this->published_at->format('Y-m-d'),
             'tutor'        => new TutorResource($this->whenLoaded('tutor')),
             'topic'        => [
                 'id'    => $this->topic->id,
