@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TopicController;
 use Illuminate\Foundation\Application;
@@ -45,3 +46,5 @@ Route::get('/subjects/{subject:slug}', [SubjectController::class, 'show'])->name
 Route::get('/topics/{topic:slug}', [TopicController::class, 'show'])->name('topics.show');
 
 Route::get('/lessons/{lesson:slug}', [LessonController::class, 'show'])->name('lessons.show');
+
+Route::get('/quizzes/{quiz:slug}', [QuizController::class, 'show'])->name('quizzes.show');
