@@ -47,4 +47,5 @@ Route::get('/topics/{topic:slug}', [TopicController::class, 'show'])->name('topi
 
 Route::get('/lessons/{lesson:slug}', [LessonController::class, 'show'])->name('lessons.show');
 
-Route::get('/quizzes/{quiz:slug}', [QuizController::class, 'show'])->name('quizzes.show');
+Route::get('/quizzes/{quiz:id}', [QuizController::class, 'show'])->name('quizzes.show');
+Route::get('/quizzes/{quiz:id}/attempt', [QuizController::class, 'attempt'])->name('quizzes.attempt');
