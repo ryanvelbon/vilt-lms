@@ -69,7 +69,41 @@ class QuizResource extends Resource
 
                         Forms\Components\Card::make()
                             ->schema([
-                                Forms\Components\Placeholder::make('Questions'),
+                                Forms\Components\Repeater::make('questions')
+                                    ->relationship()
+                                    ->schema([
+                                        Forms\Components\Textarea::make('question')
+                                            ->required()
+                                            ->maxLength(300),
+                                        Forms\Components\Group::make()
+                                            ->schema([
+                                                Forms\Components\TextInput::make('option_a')
+                                                    ->required()
+                                                    ->maxLength(70)
+                                                    ->label('A'),
+                                                Forms\Components\TextInput::make('option_b')
+                                                    ->required()
+                                                    ->maxLength(70)
+                                                    ->label('B'),
+                                                Forms\Components\TextInput::make('option_c')
+                                                    ->required()
+                                                    ->maxLength(70)
+                                                    ->label('C'),
+                                                Forms\Components\TextInput::make('option_d')
+                                                    ->required()
+                                                    ->maxLength(70)
+                                                    ->label('D'),
+                                                Forms\Components\Select::make('correct_option')
+                                                    ->options([
+                                                        'A' => 'A',
+                                                        'B' => 'B',
+                                                        'C' => 'C',
+                                                        'D' => 'D',
+                                                    ]),
+                                            ])->columns(5),
+                                    ])
+                                    ->defaultItems(3)
+                                    ->columnSpan('full')
                             ]),
                     ])->columnSpan('full')
             ]);
@@ -79,6 +113,8 @@ class QuizResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('tutor.name')
                     ->size('sm'),
                 Tables\Columns\TextColumn::make('title')
