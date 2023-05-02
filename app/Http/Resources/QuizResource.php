@@ -23,7 +23,7 @@ class QuizResource extends JsonResource
                 'name' => $this->tutor->name,
                 'pic' => $this->tutor->pic,
             ],
-            'published_at' => $this->published_at->format('Y-m-d'),
+            'published_at' => $this->published_at ? $this->published_at->format('Y-m-d') : null,
         ];
     }
 }

@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('quiz_questions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('quiz_id')->constrained();
-            $table->foreignId('topic_id')->constrained();
+            $table->foreignId('topic_id')->nullable()->constrained();
             $table->text('question');
             $table->char('correct_option', 1);
             $table->string('option_a');
