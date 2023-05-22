@@ -69,6 +69,7 @@ let selectedSubject = subjects.filter(subject => subject.slug === props.selected
                       <Link
                         :key="child.title"
                         :href="route('topics.show', { slug: child.slug })"
+                        :class="{ 'text-blue-500 font-bold': route().current('topics.show', { slug: child.slug }) }"
                       >
                         {{ child.title }}
                       </Link>
