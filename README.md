@@ -1,6 +1,6 @@
-# aptiduo
+# vilt LMS
 
-aptiduo is an educational platform that provides resources for STEM subjects at the GCSE level. The platform includes lessons, quizzes, tools, and other resources that are designed to support students from Form 1 level to Sixth Form level. By providing a comprehensive range of educational content, the platform aims to help students improve their understanding of STEM subjects and achieve their academic goals.
+viltLMS is an educational platform that provides resources for STEM subjects at the GCSE level. The platform includes lessons, quizzes, tools, and other resources that are designed to support students from Form 1 level to Sixth Form level. By providing a comprehensive range of educational content, the platform aims to help students improve their understanding of STEM subjects and achieve their academic goals.
 
 ## Features
 

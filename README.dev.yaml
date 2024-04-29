@@ -1,7 +1,8 @@
-hours: 7
+hours: 16
 inspiration:
   - w3schools.com
-  - 
+  - laracasts.com
+  - udemy.com
 technical_decisions:
   - title: 'Storing quizzes as YAML files'
     reasons:

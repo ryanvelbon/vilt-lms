@@ -20,7 +20,7 @@ let selectedSubject = subjects.filter(subject => subject.slug === props.selected
   <div>
     <div class="min-h-screen bg-gray-100">
       <nav class="bg-gray-800 px-4 py-3 flex items-center justify-between">
-        <div class="text-white text-xl font-bold">aptiduo</div>
+        <div class="text-white text-xl font-bold">viltLMS</div>
         <div class="flex md:hidden">
           <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:text-white" aria-label="toggle menu">
             <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
